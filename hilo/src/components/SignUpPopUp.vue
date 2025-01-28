@@ -73,9 +73,11 @@ export default defineComponent({
     const route = useRoute();
 
     const navigateToStudentPage = () => {
-      // Navigate to the student page
-      router.push('/student-create-account');
+      setTimeout(() => {
+        router.push('/student-create-account');
+      }, 100); // Delay navigation slightly
     };
+
 
     const closePopup = () => {
       emit('close');
